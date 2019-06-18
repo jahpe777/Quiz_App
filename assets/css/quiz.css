@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Permanent Marker', sans-serif;
+    background-color: #ffffff;
+    background: url('https://vanyaland.com/wp-content/uploads/2018/08/BeachHouseFeat2_CreditJackHutchings.jpg') fixed;
+    color: red;
+    
+}
+
+/*header*/
+
+header {
+    display: inline;
+    font-size: 50px;
+    color: white;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.stats {
+   display: inline;
+   text-align: right;
+}
+
+
+/*main*/
+
+main {
+    font-size: 50px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.startButton {
+    width: 500px;
+    height: 100px;
+    margin-top: 40px;
+    background-color:black;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    color: red;
+    border: black solid;
+}
+
+/*@media screen and (max-width: 1190px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}*/
