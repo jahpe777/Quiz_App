@@ -15,7 +15,7 @@ body {
 /*header*/
 
 header {
-    display: inline;
+    display: inline-block;
     font-size: 50px;
     color: white;
     width: 100%;
@@ -23,7 +23,7 @@ header {
 }
 
 .stats {
-   display: inline;
+   /*display: inline-block;*/
    text-align: right;
 }
 
@@ -34,7 +34,7 @@ main {
     font-size: 50px;
     width: 50%;
     text-align: center;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
 }
 
 .startButton {
@@ -47,6 +47,14 @@ main {
     font-size: 50px;
     color: red;
     border: black solid;
+}
+
+.logoImage {
+    width: 150px;
+    height: 150px;
+    /*display: inline-block;*/
+    text-align: left;
+    margin: 50px;
 }
 
 /*@media screen and (max-width: 1190px) {
