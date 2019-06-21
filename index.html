@@ -4,121 +4,39 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="What band wrote this song?">
+    <meta name="description" content="What Band Wrote This Song?">
     <title>Band Quiz App</title>
     <link href="assets/css/quiz.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <script type='text/javascript' src='assets/js/lib/jquery-3.4.1.min.js'></script>
-    <script type='text/javascript' src='assets/js/quiz.js'></script>
   </head>
 
   <body>
-    
-    
-        <container>
-    
-        <header role="banner">
-           
-            <div class="stats">
-                <ul>
-                  <li>Question: <span class="questionNumber">0</span>/10</li>
-                  <li>Score: <span class="score">0</span></li>
-                </ul>
-              </div>
+    <container>
+    <header>
 
-        </header>
-    
-        <main>
-            <div class="quizStart">
-                <h1>Do you know songs?<br>Do you know bands?</br></h1>
-                <button type="button" class="startButton">PROVE IT!</button>
-            </div>
-            <div class="questionAnswerForm"></div>
+        <div class="logo">
+            <img class="logoImage" src="http://www.spstencils.com/wp-content/uploads/2014/12/001-Microphone-2.gif" alt="microphone icon"/>
+        </div>
 
-<!--        //Question 1
-            //What band performed "I Want to Hold Your Hand" on Ed Sullivan in 1964?
-            //Choices - The Rolling Stones, The Kinks, The Beatles, The Monkees
-            //Answer 1 - The Beatles
-            //img https://www.rollingstone.com/wp-content/uploads/2018/06/rs-218776-rexfeatures_11258b.jpg
-        
+        <div class="stats">
+            <ul>
+                <li>Question: <span class="questionNum">0</span>/10</li>
+                <li>Score: <span class="score">0</span></li>
+            </ul>
+        </div>
 
-            //Question 2
-            //What artist broke The Bealtes record of having five simultaneous singles on Billboards Top 10?
-            //Choices - Cardi B, Drake, Eminem, Kanye West
-            ////Answer 2 - Drake
-            //img https://www.gannett-cdn.com/-mm-/17f0bbc301aca5b63933268b47c3d2e371a6ed7c/c=0-36-1847-1080/local/-/media/2018/02/16/USATODAY/USATODAY/636543864788750130-AP-MUSIC-DRAKE-94859299.JPG?width=3200&height=1680&fit=crop
+    </header>
+    <main>
+        <div class="beginQuiz">
+            <h1>Do you know songs?<br>Do you know bands?</br></h1>
+            <button type="button" class="startButton">PROVE IT!</button>
+        </div>
+        <div class="questionAnswer"></div>
+    </main>
+       
 
-            //Question 3
-            //What artist's classic album "Dark Side of the Moon" spent a record setting 861 weeks riding the Billboard 200 album chart?
-            //Choices - Led Zeppelin, David Bowie, Queen, Pink Floyd
-            //Answer 3 - Pink Floyd
-            //img https://www.rollingstone.com/wp-content/uploads/2019/02/pink-floyd-1968.jpg
-
-            //Question 4
-            //Which band recently headlined Coachella 2019?
-            //Choices - Solange, The 1975, Tame Impala, Diplo
-            //Answer 4 - Tame Impala
-            //img https://m.media-amazon.com/images/M/MV5BZGQxNWZiMmMtZTk3Yi00MjUxLWJjOWUtY2IzYWU1YzZlOTNkXkEyXkFqcGdeQXVyNTI5NjIyMw@@._V1_.jpg
-
-            //Question 5
-            //What artist's most recent album is titled "7".
-            //Choices - Beach House, Radiohead, The Rapture, St. Vincent
-            //Answer 5 - Beach House
-            //img https://www.rollingstone.com/wp-content/uploads/2018/06/rs-205769-beachhouse-2015-promo-01-shawnbrackbill-1500x2248-300.jpg
--->
-
-
-    <!--  <nav>
-          </nav>
-    
-       <section role="">
-        <address>
-          <h2></h2>
-            <p>
-            <br><a href=""></a></br>
-            <br><img src="" alt="" height="" width=""></br>
-            </p>
-        </address>
-        </section>
-    
-        <section>
-          <h2></h2>
-            <h3></h3>
-        </section>
-    
-        <section>
-          <h2></h2>
-          <article>
-            <h3></h3>
-            <h4>
-              <div></div> 
-            </h4>
-              <p></p>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-          </article>
-          <article>
-            <h3></h3>
-            <h4>
-              <div></div> 
-            </h4>
-              <ul>
-                <li></li>
-                <li></li>
-              </ul>
-          </article>
-        </section> -->
-    
-        </main>
-        
-        <footer>
-        </footer>
-        
-        </container> 
-        
-
+    <script type='text/javascript' src='assets/js/lib/jquery-3.4.1.min.js'></script>
+    <script type='text/javascript' src='assets/js/store.js'></script>
+    <script type='text/javascript' src='assets/js/quiz.js'></script>
   </body>
 </html>
