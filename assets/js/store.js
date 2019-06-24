@@ -120,16 +120,3 @@ const STORE = [
     alt: 'Beach House Image'
     }
   ];
-
-  const RESULTS = [
-    {
-    correct: 'Correct - It Had To Be You!',
-    imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi5mFqOo9i0oN6AQxChq0udehgikMOuY1qWWz7q6QkWnX1TnLUPw',
-    alt: 'Frank Sinatra Image'
-    },
-    {
-    wrong: 'Wrong - Bawitdaba!',
-    imageUrl: 'https://nyppagesix.files.wordpress.com/2018/10/kid-rock.jpg?quality=90&strip=all&w=618&h=410&crop=1',
-    alt: 'Kid Rock Image' 
-    },
-  ];
