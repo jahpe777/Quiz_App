@@ -45,15 +45,16 @@ function generateQuestion() {
         </fieldset>
         </form>
         </div>`;
-    } else {
+    }  else {
         makeResults();
         restartQuiz();
         $(".questionNum").text(10)
     }
-}
+} 
 
 function renderQuestion() {
     $(".questionAnswer").html(generateQuestion());
+    pickAnswer();
 }
 
 function pickAnswer() {
@@ -98,6 +99,7 @@ function userAnswerFeedbackCorrect() {
     <b>Correct!</b></p>
     <button type=button class="nextButton">Next Question</button>
     </div>`);
+    renderNextQuestion();
 }
 
 function userAnswerFeedbackWrong() {
@@ -107,6 +109,7 @@ function userAnswerFeedbackWrong() {
     alt="${STORE[questionNum].alt}"/></div><p><b>Wrong!</b></p>
     <button type=button class="nextButton">Next Question</button>
     </div>`);
+    renderNextQuestion();
 }
 
 function updateScore() {
@@ -118,7 +121,7 @@ function renderNextQuestion() {
     $("main").on("click", ".nextButton", function(event) {
         changeQuestionNumber();
         renderQuestion();
-        pickAnswer();
+        /*pickAnswer();*/
     });
 }
 
@@ -149,11 +152,9 @@ function restartQuiz() {
     });
 }
 
-function createQuiz () {
+function runQuiz () {
     startQuiz();
-    pickAnswer();
-    renderNextQuestion();
   }
   
-  $(createQuiz);
+  $(runQuiz);
 

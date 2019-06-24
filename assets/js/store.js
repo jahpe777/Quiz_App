@@ -12,7 +12,7 @@ const STORE = [
       alt: 'The Beatles Image'
     },
     {
-      question: 'What artist broke The Bealtes record of having five simultaneous singles on Billboards Top 10?',
+      question: 'What artist broke The Beatles record of having five simultaneous singles on Billboards Top 10?',
       answers: [
         'Cardi B',
         'Drake',
@@ -79,9 +79,9 @@ const STORE = [
       'Giant Steps',
       '\'Round Midnight'
       ],
-      correctAnswer: 'Tame Impala',
-      imageUrl: 'https://m.media-amazon.com/images/M/MV5BZGQxNWZiMmMtZTk3Yi00MjUxLWJjOWUtY2IzYWU1YzZlOTNkXkEyXkFqcGdeQXVyNTI5NjIyMw@@._V1_.jpg',
-      alt: 'Tame Impala Image'
+      correctAnswer: 'Birth of the Cool',
+      imageUrl: 'https://www.rollingstone.com/wp-content/uploads/2018/06/miles-davis-15-essential-albums-36cfea97-6c12-493e-967c-7661f6c08b72.jpg',
+      alt: 'Miles Davis Image'
     },
     {
       question: 'One of the first albums to be recorded digitally, "The Nightfly" is the standout record of which artist?',
