@@ -2,7 +2,7 @@ let questionNum = 0;
 let score = 0;
 
 function startQuiz() {
-    $(".startButton").on("click", e => {
+    $(".startButton").on("click", function(event) {
         event.preventDefault();
         $(".beginQuiz").css("display","none");
         $(".questionAnswer").css("display", "block");
@@ -57,7 +57,7 @@ function renderQuestion() {
 }
 
 function pickAnswer() {
-    $("form'").on("submit", function (event) {
+    $("form").on("submit", function(event) {
         event.preventDefault();
         let selected = $("input:checked");
         let answer = selected.val();
@@ -100,7 +100,7 @@ function userAnswerFeedbackCorrect() {
     </div>`);
 }
 
-function userAnswerFeedbackWrong () {
+function userAnswerFeedbackWrong() {
     let correctAnswer = `${STORE[questionNum].correctAnswer}`;
     $(".questionAnswer").html(`<div class="correctFeedback">
     <div class="imageUrl"><img src="${STORE[questionNum].imageUrl} 
@@ -115,14 +115,14 @@ function updateScore() {
 }
 
 function renderNextQuestion() {
-    $("main").on("click", ".nextButton", function (event) {
+    $("main").on("click", ".nextButton", function(event) {
         changeQuestionNumber();
         renderQuestion();
         pickAnswer();
     });
 }
 
-function renderResults() {
+function makeResults() {
     if (score >=9) {
         $(".questionanswer").html(`<div class="results 
         correctFeedback"><h3>It Had To Be You!</h3><img src=
@@ -151,7 +151,6 @@ function restartQuiz() {
 
 function createQuiz () {
     startQuiz();
-    renderQuestion();
     pickAnswer();
     renderNextQuestion();
   }
