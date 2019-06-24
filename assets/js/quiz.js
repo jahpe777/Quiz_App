@@ -1,13 +1,32 @@
 let questionNum = 0;
 let score = 0;
 
-function startQuiz() {
+function createListeners() {
     $(".startButton").on("click", function(event) {
         event.preventDefault();
         $(".beginQuiz").css("display","none");
         $(".questionAnswer").css("display", "block");
         $(".questionNum").text(1);
         renderQuestion()
+    });
+  
+    $(".questionAnswer").on("submit", "form", function(event) {
+        event.preventDefault();
+        let selected = $("input:checked");
+        let answer = selected.val();
+        let correctAnswer = `${STORE[questionNum].correctAnswer}`;
+        if (answer === correctAnswer) {
+            selected.parent().addClass("correct"); 
+            ifAnswerIsCorrect();
+        } else {
+            selected.parent().addClass("wrong");
+            ifAnswerIsWrong();
+        }
+    });
+
+    $("main").on("click", ".nextButton", function(event) {
+        changeQuestionNumber();
+        renderQuestion();
     });
 }
 
@@ -54,28 +73,11 @@ function generateQuestion() {
 
 function renderQuestion() {
     $(".questionAnswer").html(generateQuestion());
-    pickAnswer();
-}
-
-function pickAnswer() {
-    $("form").on("submit", function(event) {
-        event.preventDefault();
-        let selected = $("input:checked");
-        let answer = selected.val();
-        let correctAnswer = `${STORE[questionNum].correctAnswer}`;
-        if (answer === correctAnswer) {
-            selected.parent().addClass("correct"); 
-            ifAnswerIsCorrect();
-        } else {
-            selected.parent().addClass("wrong");
-            ifAnswerIsWrong();
-        }
-    });
 }
 
 function ifAnswerIsCorrect() {
-    userAnswerFeedbackCorrect();
     updateScore();
+    userAnswerFeedbackCorrect();
 }
 
 function ifAnswerIsWrong () {
@@ -85,6 +87,11 @@ function ifAnswerIsWrong () {
 function changeQuestionNumber() {
     questionNum++;
     $(".questionNum").text(questionNum+1);
+}
+
+function updateScore() {
+    changeScore();
+    $(".score").text(score);
 }
 
 function changeScore() {
@@ -105,36 +112,23 @@ function userAnswerFeedbackCorrect() {
 function userAnswerFeedbackWrong() {
     let correctAnswer = `${STORE[questionNum].correctAnswer}`;
     $(".questionAnswer").html(`<div class="correctFeedback">
-    <div class="imageUrl"><img src="${STORE[questionNum].imageUrl} 
+    <div class="imageUrl"><img src="${STORE[questionNum].imageUrl}"
     alt="${STORE[questionNum].alt}"/></div><p><b>Wrong!</b></p>
     <button type=button class="nextButton">Next Question</button>
     </div>`);
     renderNextQuestion();
 }
 
-function updateScore() {
-    changeScore();
-    $(".score").text(score);
-}
-
-function renderNextQuestion() {
-    $("main").on("click", ".nextButton", function(event) {
-        changeQuestionNumber();
-        renderQuestion();
-        /*pickAnswer();*/
-    });
-}
-
 function makeResults() {
-    if (score >=9) {
+    if (score >= 8) {
         $(".questionanswer").html(`<div class="results 
         correctFeedback"><h3>It Had To Be You!</h3><img src=
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi5mFqOo9i0oN6AQxChq0udehgikMOuY1qWWz7q6QkWnX1TnLUPw"
+        "https://aarp-content.brightspotcdn.com/ba/47/ebbf283b7cff2f45f6d6c712f14e/frank-sinatra-2-herman-leonard-photography-llc.jpg"
         alt="Frank Sinatra Image"/><p>${score} / 10</p>
         <button class="restartButton">Restart</button></div>`);
-    }   else if (score < 9 && score >=6) {
+    }   else if (score < 8 && score >= 5) {
         $(".questionAnswer").html(`<div class="results 
-        correctFeedback"><h3>We Gon' Be Alright!</h3><img src=
+        correctFeedback"><h3>U Gon' Be Alright!</h3><img src=
         "https://timedotcom.files.wordpress.com/2018/06/kendrick-lamar-on-winning-pulitzer-prize.jpg"
         alt="Kendrick Lamar Image"/><p>${score} / 10</p>
         <button class="restartButton">Restart</button></div>`);
@@ -153,8 +147,7 @@ function restartQuiz() {
 }
 
 function runQuiz () {
-    startQuiz();
+    createListeners();
   }
-  
-  $(runQuiz);
+    $(runQuiz);
 
