@@ -120,25 +120,28 @@ function userAnswerFeedbackWrong() {
 }
 
 function makeResults() {
+	let imageUrl = "";
+	let text = "";
+	let alt = ""
     if (score >= 8) {
-        $(".questionanswer").html(`<div class="results 
-        correctFeedback"><h3>It Had To Be You!</h3><img src=
-        "https://aarp-content.brightspotcdn.com/ba/47/ebbf283b7cff2f45f6d6c712f14e/frank-sinatra-2-herman-leonard-photography-llc.jpg"
-        alt="Frank Sinatra Image"/><p>${score} / 10</p>
-        <button class="restartButton">Restart</button></div>`);
+		imageUrl = "https://aarp-content.brightspotcdn.com/ba/47/ebbf283b7cff2f45f6d6c712f14e/frank-sinatra-2-herman-leonard-photography-llc.jpg"
+        alt = "Frank Sinatra Image"
+		text = "It Had To Be You!"
     }   else if (score < 8 && score >= 5) {
-        $(".questionAnswer").html(`<div class="results 
-        correctFeedback"><h3>U Gon' Be Alright!</h3><img src=
-        "https://timedotcom.files.wordpress.com/2018/06/kendrick-lamar-on-winning-pulitzer-prize.jpg"
-        alt="Kendrick Lamar Image"/><p>${score} / 10</p>
+        imageUrl = "https://timedotcom.files.wordpress.com/2018/06/kendrick-lamar-on-winning-pulitzer-prize.jpg"
+		alt = "Kendrick Lamar Image"
+		text = "U Gon' Be Alright!"
+    }   else {
+		text = "Bawitdaba!"
+		alt = "Kid Rock Image"
+		imageUrl = "https://nyppagesix.files.wordpress.com/2018/10/kid-rock.jpg?quality=90&strip=all&w=618&h=410&crop=1"
+	}
+	$(".questionAnswer").html(`<div class="results 
+        correctFeedback"><h3>${text}</h3><img src=
+        "${imageUrl}"
+        alt=${alt}/><p>${score} / 10</p>
         <button class="restartButton">Restart</button></div>`);
-    }   else 
-        $(".questionAnswer").html(`<div class="results 
-        correctFeedback"><h3>Bawitdaba!</h3><img src=
-        "https://nyppagesix.files.wordpress.com/2018/10/kid-rock.jpg?quality=90&strip=all&w=618&h=410&crop=1"
-        alt="Kid Rock Image"/><p>${score} / 10</p>
-        <button class="restartButton">Restart</button></div>`);
-    }
+  }
 
 function restartQuiz() {
     $("main").on("click", ".restartButton", function(event) {

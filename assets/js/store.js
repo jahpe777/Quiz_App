@@ -56,7 +56,7 @@ const STORE = [
       'Prince'
       ],
       correctAnswer: 'Prince',
-      imageUrl: 'https://www.capitalfm.co.ke/lifestyle/files/2016/04/Prince.jpg',
+      imageUrl: 'https://www.billboard.com/files/media/prince-live-purple-1985-a-billboard-1548.jpg',
       alt: 'Prince Image'
     },
     {
