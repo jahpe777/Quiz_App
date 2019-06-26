@@ -20,7 +20,7 @@ const STORE = [
         'Kanye West'
         ],
         correctAnswer: 'Drake',
-        imageUrl: 'https://www.gannett-cdn.com/-mm-/17f0bbc301aca5b63933268b47c3d2e371a6ed7c/c=0-36-1847-1080/local/-/media/2018/02/16/USATODAY/USATODAY/636543864788750130-AP-MUSIC-DRAKE-94859299.JPG?width=3200&height=1680&fit=crop',
+        imageUrl: 'https://media.architecturaldigest.com/photos/58d2e9d6befdff5c4241002a/16:9/w_1280,c_limit/drake.jpg',
         alt: 'Drake Image'
     },
     {
@@ -80,7 +80,7 @@ const STORE = [
       '\'Round Midnight'
       ],
       correctAnswer: 'Birth of the Cool',
-      imageUrl: 'https://www.rollingstone.com/wp-content/uploads/2018/06/miles-davis-15-essential-albums-36cfea97-6c12-493e-967c-7661f6c08b72.jpg',
+      imageUrl: 'https://www.latimes.com/resizer/A0fMV8YUSeT61h8_M28fT1XeZs0=/1200x0/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/YDWN2SFUSZCPHIMWSQUKROYZ4Q.jpg',
       alt: 'Miles Davis Image'
     },
     {

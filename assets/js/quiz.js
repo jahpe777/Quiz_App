@@ -104,7 +104,7 @@ function userAnswerFeedbackCorrect() {
     <div class="imageUrl"><img src="${STORE[questionNum].imageUrl}" 
     alt="${STORE[questionNum].alt}"/></div><p>
     <b>Correct!</b></p>
-    <button type=button class="nextButton">Next Question</button>
+    <button type=button class="nextButton">Next</button>
     </div>`);
     renderNextQuestion();
 }
@@ -114,7 +114,7 @@ function userAnswerFeedbackWrong() {
     $(".questionAnswer").html(`<div class="correctFeedback">
     <div class="imageUrl"><img src="${STORE[questionNum].imageUrl}"
     alt="${STORE[questionNum].alt}"/></div><p><b>Wrong!</b></p>
-    <button type=button class="nextButton">Next Question</button>
+    <button type=button class="nextButton">Next</button>
     </div>`);
     renderNextQuestion();
 }
